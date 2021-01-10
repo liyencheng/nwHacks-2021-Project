@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import getActivitiesObject from '/Users/ash/Desktop/nwHacks/nwHacks-2021-Project/src/activity_selection.js';
+import getActivitiesObject from './activity_selection.js';
 
 class Moods extends React.Component {
     
