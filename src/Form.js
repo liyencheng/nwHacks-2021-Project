@@ -12,7 +12,9 @@ class Moods extends React.Component {
         const moods = [
             'Sad', 
             'Angry', 
-            'Stressed'
+            'Stressed',
+            'Demotivated',
+            'Happy'
         ];
 
         var style = {
@@ -43,6 +45,20 @@ class Moods extends React.Component {
                     <Button variant='contained' style={style} onClick={() => this.props.onClick(2)}>
                         <Emoji symbol={0x1F62B} />
                         {moods[2]}
+                    </Button>
+                </div>
+                <br></br>
+                <div className='Demotivated'>
+                    <Button variant='contained' style={style} onClick={() => this.props.onClick(3)}>
+                        <Emoji symbol={0x1F61E} />
+                        {moods[3]}
+                    </Button>
+                </div>
+                <br></br>
+                <div className='Happy'>
+                    <Button variant='contained' style={style} onClick={() => this.props.onClick(4)}>
+                        <Emoji symbol={0x1F642} />
+                        {moods[4]}
                     </Button>
                 </div>
             </div>
