@@ -1,27 +1,41 @@
 import React from 'react';
 
 class Moods extends React.Component {
+    
     render() {
+        const Emoji = React.memo(({ className, label, symbol }) =>
+            <span className={className} role="img" aria-label={label}>
+                {String.fromCodePoint(symbol)}
+            </span>)
+
         const moods = [
             'Sad', 
             'Angry', 
             'Stressed'
         ];
 
+        var style = {
+            width: 300,
+            height: 50,
+        }
+
         return (
             <div>
-                <div className='Mood0'>
-                    <button className='Mood0' onClick={() => this.props.onClick()}>
+                <div className='Sad'>
+                    <button style={style} onClick={() => this.props.onClick(0)}>
+                        <Emoji symbol={0x1F641} />
                         {moods[0]}
                     </button>
                 </div>
-                <div className='Mood1'>
-                    <button className='Mood1' onClick={() => this.props.onClick()}>
+                <div className='Angry'>
+                    <button style={style} onClick={() => this.props.onClick(1)}>
+                        <Emoji symbol={0x1F62B} />
                         {moods[1]}
                     </button>
                 </div>
-                <div className='Mood2'>
-                    <button className='Mood2' onClick={() => this.props.onClick()}>
+                <div className='Stressed'>
+                    <button style={style} onClick={() => this.props.onClick(2)}>
+                        <Emoji symbol={0x1F641} />
                         {moods[2]}
                     </button>
                 </div>
@@ -39,7 +53,13 @@ export default class Form extends React.Component {
     };
 
     handleClick(i) {
+        if (i === 0) {
 
+        } else if (i === 1) {
+
+        } else if (i === 2) {
+
+        }
     }
 
     render() {
