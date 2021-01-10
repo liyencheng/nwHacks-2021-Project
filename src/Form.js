@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@material-ui/core/Button'
 
 class Moods extends React.Component {
     
@@ -15,29 +16,34 @@ class Moods extends React.Component {
         ];
 
         var style = {
-            width: 300,
-            height: 50,
+            backgroundColor: "#3c70dc",
+            width: 400,
+            height: 100,
+            fontSize: 52,
+            color: 'white'
         }
 
         return (
             <div>
                 <div className='Sad'>
-                    <button style={style} onClick={() => this.props.onClick(0)}>
+                    <Button variant='contained' style={style} onClick={() => this.props.onClick(0)}>
                         <Emoji symbol={0x1F641} />
                         {moods[0]}
-                    </button>
+                    </Button>
                 </div>
+                <br></br>
                 <div className='Angry'>
-                    <button style={style} onClick={() => this.props.onClick(1)}>
-                        <Emoji symbol={0x1F62B} />
+                    <Button variant='contained' style={style} onClick={() => this.props.onClick(1)}>
+                        <Emoji symbol={0x1F620} />
                         {moods[1]}
-                    </button>
+                    </Button>
                 </div>
+                <br></br>
                 <div className='Stressed'>
-                    <button style={style} onClick={() => this.props.onClick(2)}>
-                        <Emoji symbol={0x1F641} />
+                    <Button variant='contained' style={style} onClick={() => this.props.onClick(2)}>
+                        <Emoji symbol={0x1F62B} />
                         {moods[2]}
-                    </button>
+                    </Button>
                 </div>
             </div>
         )
@@ -66,7 +72,7 @@ export default class Form extends React.Component {
         return (
             <div>
                 <div>
-                    <h1>How are you feeling?</h1>
+                    <h1 style={{ color: 'white'}}>HOW ARE YOU FEELING?</h1>
                 </div>
                 <div>
                     <Moods 
