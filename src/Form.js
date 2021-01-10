@@ -17,7 +17,7 @@ class Moods extends React.Component {
 
         var style = {
             backgroundColor: "#3c70dc",
-            width: 400,
+            width: 500,
             height: 100,
             fontSize: 52,
             color: 'white'
