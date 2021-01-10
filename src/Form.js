@@ -54,7 +54,8 @@ export default class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            chosen: null
+            chosenInd: null,
+            isClicked: false
         }
     };
 
@@ -66,19 +67,30 @@ export default class Form extends React.Component {
         } else if (i === 2) {
 
         }
+        this.setState({
+            isClicked: true
+        })
     }
 
     render() {
         return (
             <div>
-                <div>
-                    <h1 style={{ color: 'white'}}>HOW ARE YOU FEELING?</h1>
-                </div>
-                <div>
-                    <Moods 
-                    onClick={(i) => this.handleClick(i)}
-                    />
-                </div>
+                {
+                this.state.isClicked ?
+                    null :
+                    <div>
+                        <h1 style={{ color: 'white'}}>HOW ARE YOU FEELING?</h1>
+                    </div>
+                }
+                {
+                this.state.isClicked ?
+                    null :
+                    <div>
+                        <Moods 
+                        onClick={(i) => this.handleClick(i)}
+                        />
+                    </div>
+                }
             </div>
         )
     }
